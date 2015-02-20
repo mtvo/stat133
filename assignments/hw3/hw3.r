@@ -150,7 +150,7 @@ wr_1944 <- wr1500m[wr1500m$year == 1944,6]
 
 # Your ggplot command
 q <- ggplot(wr1500m, aes(new_year, times_sec)) + xlim(min(wr1500m$new_year),2015) + geom_step() + geom_segment(x= max(wr1500m$new_year), xend = 2015, y = min(wr1500m$times_sec), yend = wr_1998) 
-q + geom_vline(xintercept= 1944) + annotate("text", x= 1930, y = 250, label = wr1500m[(wr1500m$year == 1944), 4]) + geom_vline(xintercept= 1998) + annotate("text", x= 1978, y = 250, label = wr1500m[wr1500m$year == 1998, 4])
+q + geom_vline(xintercept= 1944, colour= "green") + annotate("text", x= 1930, y = 250, label = wr1500m[(wr1500m$year == 1944), 4]) + geom_vline(xintercept= 1998, colour= "green") + annotate("text", x= 1978, y = 250, label = wr1500m[wr1500m$year == 1998, 4])
 
 
 # Q5. Now we are ready to add other contextual information.
@@ -159,7 +159,7 @@ q + geom_vline(xintercept= 1944) + annotate("text", x= 1930, y = 250, label = wr
 # Hint : labs()
 
 # Your ggplot commands
-q2 <- q + geom_vline(xintercept= 1944) + annotate("text", x= 1930, y = 250, label = wr1500m[(wr1500m$year == 1944), 4]) + geom_vline(xintercept= 1998) + annotate("text", x= 1978, y = 250, label = wr1500m[wr1500m$year == 1998, 4])
+q2 <- q + geom_vline(xintercept= 1944, colour= "green") + annotate("text", x= 1930, y = 250, label = wr1500m[(wr1500m$year == 1944), 4]) + geom_vline(xintercept= 1998, colour= "green") + annotate("text", x= 1978, y = 250, label = wr1500m[wr1500m$year == 1998, 4])
 q2 + xlab("Year") + ylab("World Record Time (sec)") + ggtitle ("Worlds Record Times 1892-2014")
 
 ################################
@@ -230,7 +230,7 @@ top5 <- order(SO2012Ctry$pop, decreasing = TRUE)
 pop <- top5[1:5]
 Country <- SO2012Ctry$Country[pop]
 
-q3 <- ggplot(SO2012Ctry, aes(x= logGPP, y= logpop, size = Total)) + geom_point(fill = "grey", shape= 21) + scale_size_area(max_size = 20) + xlim(4,12) + ylim(8,22) 
+q3 <- ggplot(SO2012Ctry, aes(x= logGPP, y= logpop, size= Total)) + geom_point(fill = "grey", shape = 21) + scale_size_area(max_size = 20) + xlim(4,12) + ylim(8,22) 
 q3 + xlab("GDP per person (log scale)") + ylab("Population (log scale)") + annotate("text", x= log(SO2012Ctry$GDP_per_person[pop]), y = log(SO2012Ctry$pop[pop]), label = Country )
 
 ######################################
@@ -320,14 +320,15 @@ load("rainfallCO.rda")
 
 # Create a variable 
 # max.rain : a vector of length 5 with the maximum rainfall at each station
-max.rain <- sapply(rain, max)
+max.rain <- as.vector(sapply(rain, max))
+
 # Create a variable 
 # mean.rain : a vector of length 5 with the average rainfall at each station
-mean.rain <- sapply(rain, mean)
+mean.rain <- as.vector(sapply(rain, mean))
 
 # Create a variable 
 # sd.rain : a vector of length 5 with the standard deviation of the rainfall at each station
-sd.rain <- sapply(rain, sd)
+sd.rain <- as.vector(sapply(rain, sd))
 # Create a variable 
 # n1989.rain : a vector of length 5 with the number of measurements at each station in the year 1989 (use [day])
-n1989.rain <- sapply(day, length)
+n1989.rain <- as.vector(sapply(day, length))
