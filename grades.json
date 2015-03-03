@@ -1,0 +1,23 @@
+{
+    "email": "mtvo@berkeley.edu", 
+    "github_name": "mtvo", 
+    "grades": {
+        "hw1": {
+            "note": "", 
+            "hash": "38f1e1e14666ac971524d23dd0705f4abb871ecc", 
+            "earned": 20, 
+            "possible": 20, 
+            "penalty": 0, 
+            "parts": {
+                "hw1": {
+                    "possible": 20, 
+                    "earned": 20
+                }
+            }
+        }
+    }, 
+    "login": "mtvo", 
+    "name": "Michelle Vo", 
+    "status": "enrolled", 
+    "url": "git@github.com:mtvo/stat133.git"
+}
