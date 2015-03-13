@@ -55,7 +55,7 @@ rooms.less.price <- bsqft.less$price
 priceByRooms <- function(room.range, br, prices) {
     houses <- data.frame(br,prices)
     houses_short <- houses[houses$br >= min(room.range) & houses$br <= max(room.range),]
-    mean(houses_short$prices)
+    mean(houses_short$prices, na.rm = TRUE)
 
 }
 
