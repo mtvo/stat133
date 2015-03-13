@@ -19,5 +19,6 @@
     "login": "mtvo", 
     "name": "Michelle Vo", 
     "status": "enrolled", 
-    "url": "git@github.com:mtvo/stat133.git"
+    "url": "git@github.com:mtvo/stat133.git", 
+    "section": "lab3"
 }
