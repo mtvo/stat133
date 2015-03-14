@@ -112,7 +112,7 @@ bml.step <- function(m){
 bml.sim <- function(r,c,p) {
   m <- bml.init(r,c,p)
   i <- 1
-  while (i <= 1000) {
+  while (i <= 20000) {
     i <- i + 1
     new.m <- bml.step(m)
     m <- new.m[[1]]
