@@ -123,7 +123,7 @@ bml.step <- function(m){
 ## Input : size of grid [r and c] and density [p]
 ## Output : *up to you* (e.g. number of steps taken, did you hit gridlock, ...)
 
-#function determines whether the system reaches gridlock within 20000 timesteps
+#function determines whether the system reaches gridlock within 1000 timesteps
 #output prints out the timestep it hits gridlock
 bml.sim <- function(r,c,p) {
   m <- bml.init(r,c,p)
@@ -136,3 +136,4 @@ bml.sim <- function(r,c,p) {
     if (y== FALSE) break}
   print(i-1)
 }
+
