@@ -137,3 +137,14 @@ bml.sim <- function(r,c,p) {
   print(i-1)
 }
 
+##bml.sim2: variation of first function, whose input is the matrix, m, instead of the dimensions (r,c,p)
+bml.sim2 <- function(m) {
+  i <- 1
+  while (i <= 20000) {
+    i <- i + 1
+    new.m <- bml.step(m)
+    m <- new.m[[1]]
+    y <- new.m[[2]]
+    if (y== FALSE) break}
+  print(i-1)
+}
