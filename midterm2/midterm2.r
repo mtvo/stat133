@@ -40,7 +40,6 @@ m <- matrix(rexp(100, rate= 3), 10, 10)
 # Each vector of length 100 of Poisson (hint:rpois) random variables with mean 5
 set.seed(71)
 #l <- <your code here>
-l <- as.list(rep(rpois(100,5))
 
 # for the next two tasks you will use the data frame infants (size 1236x15)
 # LEAVE AS IS:
@@ -120,7 +119,6 @@ load("Cache500.rda")
 # corresponding vector in the list Cache500
 
 #first.cache <- <your code here>
-first.cache <- 
 
 # [3 pts]
 # Create [mean.cache], a vector of length 500 where each entry is the mean 
