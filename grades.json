@@ -14,6 +14,19 @@
                     "earned": 20
                 }
             }
+        }, 
+        "hw4": {
+            "note": "", 
+            "hash": "0831208a764233fa0b5614769d4b9fd6b6b86586", 
+            "earned": 4, 
+            "possible": 20, 
+            "penalty": 0, 
+            "parts": {
+                "hw4": {
+                    "possible": 20, 
+                    "earned": 4
+                }
+            }
         }
     }, 
     "login": "mtvo", 
