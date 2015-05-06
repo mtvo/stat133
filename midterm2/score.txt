@@ -1,0 +1,6 @@
+l  -1
+t: wrong table  -2
+line 107: plot ratio  -2
+first.cache  -3
+
+Score: 25/33
