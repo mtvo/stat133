@@ -224,9 +224,9 @@ symbols(x= log(SO2012Ctry$GDP_per_person), y= log(SO2012Ctry$pop), circles= SO20
 # Then add the non-medal countries to the plot using the "." 
 # plotting character.
 
-# your plotting code here
-symbols(x= log(SO2012Ctry$GDP_per_person[SO2012Ctry$Total > 0]) , y= log(SO2012Ctry$pop[SO2012Ctry$Total > 0]symbols(x= SO2012Ctry$latitude, y = SO2012Ctry$longitude, circles= SO2012Ctry$Total[SO2012Ctry$Total > 0])
-), circles= SO2012Ctry$Total[SO2012Ctry$Total > 0])
+                                        # your plotting code here
+#symbols(x= SO2012Ctry$latitude, y = SO2012Ctry$longitude, circles= SO2012Ctry$Total[SO2012Ctry$Total > 0])
+symbols(x= log(SO2012Ctry$GDP_per_person[SO2012Ctry$Total > 0]) , y= log(SO2012Ctry$pop[SO2012Ctry$Total > 0]), circles= SO2012Ctry$Total[SO2012Ctry$Total > 0])
 points(x= log(SO2012Ctry$GDP_per_person[SO2012Ctry$Total == 0]) , y= log(SO2012Ctry$pop[SO2012Ctry$Total == 0]), pch = ".")
 
 
@@ -329,7 +329,7 @@ load("London2012ALL_ATHLETES.rda")
 
 #Q13. We are interested in the relationship between Sport and Sex. 
 # Examine the data frame and check which type of data each variable is.
-names(athletes)
+#names(athletes)
 ### Name : nominal
 ### Sex : nominal
 ### Sport : nominal
